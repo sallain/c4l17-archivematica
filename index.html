@@ -1,243 +1,124 @@
 <!doctype html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
+<head>
+	<meta charset="utf-8">
 
-		<title>Introduction to Islandora</title>
+	<title>Archivematica in the Middle</title>
 
-		<meta name="description" content="Introduction to Islandora for the CLGA">
-		<meta name="author" content="Sara Allain">
+	<meta name="description" content="Archivematica in the Middle">
+	<meta name="author" content="Sara Allain">
 
-		<meta name="apple-mobile-web-app-capable" content="yes">
-		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
-		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/white.css" id="theme">
+	<link rel="stylesheet" href="css/reveal.css">
+	<link rel="stylesheet" href="css/theme/white.css" id="theme">
 
-		<!-- Code syntax highlighting -->
-		<link rel="stylesheet" href="lib/css/zenburn.css">
+	<!-- Code syntax highlighting -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
 
-		<!-- Printing and PDF exports -->
-		<script>
-			var link = document.createElement( 'link' );
-			link.rel = 'stylesheet';
-			link.type = 'text/css';
-			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-			document.getElementsByTagName( 'head' )[0].appendChild( link );
-		</script>
+	<!-- Printing and PDF exports -->
+	<script>
+	var link = document.createElement( 'link' );
+	link.rel = 'stylesheet';
+	link.type = 'text/css';
+	link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+	document.getElementsByTagName( 'head' )[0].appendChild( link );
+	</script>
 
-		<!--[if lt IE 9]>
-		<script src="lib/js/html5shiv.js"></script>
-		<![endif]-->
-	</head>
+	<!--[if lt IE 9]>
+	<script src="lib/js/html5shiv.js"></script>
+	<![endif]-->
+</head>
 
-	<body>
+<body>
 
-		<div class="reveal">
-
-			<!-- Any section element inside of this container is displayed as a slide -->
-			<div class="slides">
-				<section>
-					<h3>Introduction to</h3>
-					<h1>Islandora</h1>
-					<p>
-						<br />
-						<small>Sara Allain | CC BY-SA 4.0<br /><a href="http://sallain.github.io/intro-to-islandora">is.gd/sallain</a></small>
+	<div class="reveal">
+		<!-- Any section element inside of this container is displayed as a slide -->
+		<div class="slides">
+			<section>
+				<img src="img/archivematica.png">
+				<h3>in the middle</h3>
+				<p>
+					<br /><br />
+					<small>Sara Allain, Systems Archivist<br />
+						Artefactual Systems, Inc.<br />
+						<a href="http://sallain.github.io/c4l17-archivematica">sallain.github.io/c4l17-archivematica</a></small>
 					</p>
 				</section>
 
 				<section>
-					<h2>Definition</h2>
-					<p>Islandora is an open-source software framework designed to help institutions and organizations and their audiences collaboratively manage and discover digital assets using a best-practices framework.</p>
-					<small>- <a href="http://islandora.ca/about">About Islandora</a></small>
+					<h2>About Archivematica</h2>
+					<p><a href="https://www.archivematica.org/en/">Archivematica</a> is a suite of open-source tools in an open source wrapper that helps users carry out OAIS-compliant digital preservation tasks on their content.</p>
+					<p>Archivematica's main function is to create Archival Information Packages (AIPs) for long-term storage.</p>
 				</section>
 
 				<section>
-						<section>
-							<h2>Open Source</h2>
-						</section>
-
-						<section>
-							<h2>Islandora is Open Source</h2>
-							<p>Anybody with the knowledge, skill, and/or time can contribute to the code, making it better for everyone.</p>
-							<p>The non-profit Islandora Foundation oversees its maintenance and development and takes the lead in organizing the community.</p>
-							<small>- <a href="http://islandora.ca/about">About Islandora</a></small> <br />
-							<img src="img/opensource.png" height="200px">
-						</section>
-
-						<section>
-							<h2>Islandora is Open Source</h2>
-							<p>Open source means that we get to control, at a local level, how we use the software.</p>
-							<p>We control the data, the updating, the functionality, and the amount of time and resources that we put into the software.</p>
-						</section>
-
-						<section>
-							<h2>Islandora is a Community</h2>
-							<p>There are a hundreds of installs all over the world where people are working on the software, making it better, and helping each other out.</p>
-							<img src="img/map.png" height="400px">
-						</section>
-
-						<section>
-							<h2>Islandora is a Community</h2>
-							<p>Extensive <a href="https://wiki.duraspace.org/display/ISLANDORA715/Start">documentation</a>, an active <a href="https://groups.google.com/forum/#!forum/islandora">Google Group</a> and <a href="http://islandora.ca/help">IRC channel</a>, and expert colleagues around the world can help us work through problems and come up with creative solutions.</p>
-							<img src="img/group.png" height="300px">
-						</section>
+					<img src="img/oais.png">
 				</section>
 
 				<section>
-						<section>
-							<h2>Software Framework</h2>
-						</section>
-
-						<section>
-							<h2>Islandora is a Sandwich</h2>
-							<p>It's a bundle of smaller things squished together between two giant open source platforms - Drupal (display) and Fedora (storage).</p>
-							<img src="img/burger.png" height="300px">
-						</section>
-
-						<section>
-							<h2>Islandora is a Sandwich</h2>
-							<p><a href="https://www.drupal.org/">Drupal</a> is the website that the rest of the world sees. It's really good at letting us build  things like websites, blogs, galleries, maps, exhibits, and timelines to display the things we store in Fedora.</p>
-							<img src="img/drupal.png" height="300px">
-						</section>
-
-						<section>
-							<h2>Islandora is a Sandwich</h2>
-							<p><a href="http://www.fedora-commons.org/">Fedora</a> is where we store all the stuff. It's really good at keeping everything safe and secure.</p>
-							<img src="img/fedora.png" height="300px">
-						</section>
-
-						<section>
-							<h2>Islandora is a Sandwich</h2>
-							<p><a href="http://islandora.ca/">Islandora</a> brings Fedora and Drupal together. It adds a ton of important functionality through its solution packs and modules.</p>
-							<img src="img/islandora.png" height="200px">
-						</section>
-
-						<section>
-							<h2>Sandwich Fillings</h2>
-							<p>Islandora has solution packs for storing and presenting common types of data.</p>
-							<p class="center">
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Audio+Solution+Pack">Audio</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Basic+Collection+Solution+Pack">Basic Collection</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Basic+Image+Solution+Pack">Basic Image</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Book+Solution+Pack">Book</a> &middot
-								<br />
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Compound+Solution+Pack">Compound Object</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Large+Image+Solution+Pack">Large Image</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Newspaper+Solution+Pack">Newspaper</a>
-								<br />
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Islandora+Paged+Content">Paged Content</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/PDF+Solution+Pack">PDF</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Video+Solution+Pack">Video</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Web+Archive+Solution+Pack">Web Archive</a>
-								<br />
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Islandora+Scholar">Islandora Scholar</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Entities+Solution+Pack">Entities</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Disk+Image+Solution+Pack">Disk Image</a>
-							</p>
-						</section>
-
-						<section>
-							<h2>Sandwich Fillings</h2>
-							<p>Islandora also has utility modules that let us perform various actions on that data and/or the attached metadata.</p>
-							<p class="center">
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Islandora+Importer">Batch ingests</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Islandora+Viewers">Alternative content displays</a>
-								<br />
-								Preservation (<a href="https://wiki.duraspace.org/display/ISLANDORA715/Islandora+Checksum">Checksum</a>, <a href="https://wiki.duraspace.org/display/ISLANDORA715/Islandora+FITS">FITS</a>, <a href="https://wiki.duraspace.org/display/ISLANDORA715/Islandora+BagIt">BagIt</a>, <a href="https://wiki.duraspace.org/display/ISLANDORA715/Islandora+PREMIS">PREMIS</a>, etc.)
-								<br />
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Image+Annotation">Image annotation</a> &middot
-								<a href="https://wiki.duraspace.org/display/ISLANDORA715/Islandora+OCR">Optical character recognition</a>
-								<br />
-								And many more!
-							</p>
-						</section>
+					<h2>In the middle /1</h2>
+					<p>We think of Archivematica as part of an ecosystem of digital preservation tools. Just as it fulfils a part of the OAIS requirements, Archivematica fulfils part - the AIP-creating part - of the lifecycle of your content.</p>
 				</section>
 
 				<section>
-						<section>
-							<h2>Digital Assets</h2>
-						</section>
-
-						<section>
-							<h2>Objects</h2>
-							<p>Every piece of content in Islandora is an object. Objects can be containers for other objects.</p>
-							<img src="img/book.png" height="250px">
-						</section>
-
-						<section>
-							<h2>Metadata</h2>
-							<p>Metadata is information about the object. This can be descriptive, technical, or refer to relationships that the object has with other objects in the repository.</p>
-							<p>Through their metadata, objects relate to each other in a number of ways. Relationships can be hierarchical or flat, and an object can have many relationships.</p>
-							<img src="img/book.png" height="250px">
-						</section>
-
-						<section>
-							<h2>Searching</h2>
-							<p>A discovery layer that provides robust searching and indexing using <a href="https://wiki.duraspace.org/display/ISLANDORA715/milestone+6+-+Installing+Solr+and+GSearch">Lucene, Solr, and GSearch</a>.</p>
-							<img src="img/catalog.png" height="300px">
-						</section>
-
+					<h2>In the middle /2</h2>
+					<p>Integrating with repository platforms is a key way that Archivematica continues to grow. Archivematica has integrations (of varying levels of maturity) with Hydra, ArchivesSpace, Islandora, DSpace, Dataverse, CONTENTdm, and others.</p>
 				</section>
 
 				<section>
-
-						<section>
-							<h2>Collaboratively<br />Manage and Discover</h2>
-						</section>
-
-						<section>
-							<h2>LGBTQ+ Collaboratory Team</h2>
-							<img src="img/clga.png" height="90px"><br />
-							<img src="img/uoft.png" height="140px"><br />
-							<img src="img/rula.png" height="100px">
-						</section>
-
-						<section>
-							<h2>LGBTQ+ Collaboratory Team</h2>
-							<p>U of T will take care of the technical side of things - configuring the repository, installing any solution packs, modules, and dependencies that you need, and keeping the code up to date and working properly.</p>
-						</section>
-
-						<section>
-							<h2>LGBTQ+ Collaboratory Team</h2>
-							<p>Ryerson is here to train you on digitizing content for ingestion into Islandora and how to create metadata using the MODS forms, as well as helping out with Omeka.</p>
-						</section>
-
-						<section>
-							<h2>LGBTQ+ Collaboratory Team</h2>
-							<p>You add the content! You select items from the archives to digitize, you establish your metadata rules (like a subject vocabulary), and you upload the items into Islandora.</p>
-						</section>
-
-						<section>
-							<h2>Next Steps</h2>
-							<ul>
-								<li>Digitization plan: new content vs. migration of existing content, strategic areas of focus</li>
-								<li>Local metadata: how will things like subjects and archival locations be entered?</li>
-								<li>Website: work with U of T to make any customizations to the Islandora site</li>
-						</section>
+					<h2>In the middle /3</h2>
+					<p>Making sure that integration work emphasises flexibility and generic-ness of both data inputs and outputs (as much as we can) is important for ensuring that growth is both sustainable and useful.</p>
 				</section>
 
 				<section>
-					<section class="body">
-						<h2>Credits</h2>
-					</section>
+					<h2>How we develop</h2>
+					<p><b>Proof-of-concept projects</b> (Hydra, Dataverse) - done as R&D projects, code may not be stable enough to roll into release<p>
+					<p><b>Sponsored features/feature enhancements</b> (ArchivesSpace, Islandora) - projects usually include a 10% community fee that pays for merging into next release</p>
+				</section>
 
-					<section class="body">
-						<h2>Citations</h2>
-						<ul>
-							<li>Nick Ruest & Kirsta Stapelfeldt, <a href="http://yorkspace.library.yorku.ca/xmlui/handle/10315/28006">Introduction to Islandora</a></li>
-							<li>The <a href="http://islandora.ca">Islandora</a> and <a href="http://www.discoverygarden.ca/">Discovery Garden</a> websites, blogs, documentation, and Github repositories</li>
-							<li>Many, many other presentations that I've seen over the years on Islandora</li>
-						</ul>
-					</section>
+				<section>
+					<h2>Hydra: York/Hull pilot /1</h2>
+					<p>Performed gap analysis to see how Archivematica could meet their research data management needs and identified several areas to improve.</p>
+					<p>Decided to dedicate project funding to working on:</p>
+					<ul>
+						<li>On-demand automated DIP generation</li>
+						<li>Improved METS parsing</li>
+						<li>Introduction of a generic search REST API</li>
+						<li>Ability to handle multiple checksum algorithms</li>
+						<li>Better handling of unidentified files</li>
+					</ul>
+				</section>
 
-					<section class="body">
-						<h2>License</h2>
-						<p>This presentation is licensed CC BY-SA meaning that it can be copied, redistributed, remixed, transformed, and built upon for any purpose as long as proper attribution is given.</p>
-					</section>
+				<section>
+					<h2>Hydra: York/Hull pilot /2</h2>
+					<p>Performed gap analysis to see how Archivematica could meet their research data management needs and identified several areas to improve.</p>
+				</section>
+
+				<section>
+					<h2>ArchivesSpace: appraisal tab</h2>
+					<p>Sponsor: Bentley Historical Library, University of Michigan</p>
+					<p>"A place between Transfer and Ingest where archivists can make archival appraisal decisions with material from Transfer, and structure an arrangement for the SIP before starting Ingest processes.""</p>
+				</section>
+
+				<section>
+					<h2>ArchivesSpace: PREMIS rights</h2>
+					<p></p>
+				</section>
+
+				<section>
+					<h2></h2>
+					<p></p>
+					<p></p>
+				</section>
+
+				<section class="body">
+					<h2>License</h2>
+					<p>This presentation is licensed CC BY-SA meaning that it can be copied, redistributed, remixed, transformed, and built upon for any purpose as long as proper attribution is given.</p>
 				</section>
 			</div>
 
@@ -247,29 +128,27 @@
 		<script src="js/reveal.js"></script>
 
 		<script>
+		// Full list of configuration options available at:
+		// https://github.com/hakimel/reveal.js#configuration
+		Reveal.initialize({
+			controls: true,
+			progress: true,
+			history: true,
+			center: true,
 
-			// Full list of configuration options available at:
-			// https://github.com/hakimel/reveal.js#configuration
-			Reveal.initialize({
-				controls: true,
-				progress: true,
-				history: true,
-				center: true,
+			transition: 'none', // none/fade/slide/convex/concave/zoom
 
-				transition: 'none', // none/fade/slide/convex/concave/zoom
-
-				// Optional reveal.js plugins
-				dependencies: [
-					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-					{ src: 'plugin/zoom-js/zoom.js', async: true },
-					{ src: 'plugin/notes/notes.js', async: true }
-				]
-			});
-
+			// Optional reveal.js plugins
+			dependencies: [
+				{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+				{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+				{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+				{ src: 'plugin/zoom-js/zoom.js', async: true },
+				{ src: 'plugin/notes/notes.js', async: true }
+			]
+		});
 		</script>
 
 	</body>
-</html>
+	</html>
