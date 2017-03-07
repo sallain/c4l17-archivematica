@@ -44,7 +44,7 @@
 				<h3>in the middle</h3>
 				<p>
 					<br /><br />
-					<small>Sara Allain, Systems Archivist<br />
+					<small>Sara Allain | @archivalistic<br />
 						Artefactual Systems, Inc.<br />
 						<a href="http://sallain.github.io/c4l17-archivematica">sallain.github.io/c4l17-archivematica</a></small>
 					</p>
@@ -61,65 +61,111 @@
 				</section>
 
 				<section>
-					<h2>In the middle /1</h2>
+					<h2>In the middle</h2>
 					<p>We think of Archivematica as part of an ecosystem of digital preservation tools. Just as it fulfils a part of the OAIS requirements, Archivematica fulfils part - the AIP-creating part - of the lifecycle of your content.</p>
 				</section>
 
 				<section>
-					<h2>In the middle /2</h2>
-					<p>Integrating with repository platforms is a key way that Archivematica continues to grow. Archivematica has integrations (of varying levels of maturity) with Hydra, ArchivesSpace, Islandora, DSpace, Dataverse, CONTENTdm, and others.</p>
-				</section>
-
-				<section>
-					<h2>In the middle /3</h2>
-					<p>Making sure that integration work emphasises flexibility and generic-ness of both data inputs and outputs (as much as we can) is important for ensuring that growth is both sustainable and useful.</p>
-				</section>
-
-				<section>
-					<h2>How we develop</h2>
-					<p><b>Proof-of-concept projects</b> (Hydra, Dataverse) - done as R&D projects, code may not be stable enough to roll into release<p>
-					<p><b>Sponsored features/feature enhancements</b> (ArchivesSpace, Islandora) - projects usually include a 10% community fee that pays for merging into next release</p>
-				</section>
-
-				<section>
-					<h2>Hydra: York/Hull pilot /1</h2>
-					<p>Performed gap analysis to see how Archivematica could meet their research data management needs and identified several areas to improve.</p>
-					<p>Decided to dedicate project funding to working on:</p>
+					<h2>End to end</h2>
+					<p>Two common ways to connect Archivematica to a repository:</p>
 					<ul>
-						<li>On-demand automated DIP generation</li>
-						<li>Improved METS parsing</li>
-						<li>Introduction of a generic search REST API</li>
-						<li>Ability to handle multiple checksum algorithms</li>
-						<li>Better handling of unidentified files</li>
+						<li><b>Archivematica first</b> - content is first processed through Archivematica and DIPs are passed to the repository (i.e. AtoM, ArchivesSpace)</li>
+						<li><b>Archivematica last</b> - content is first added to the repository and then passed to Archivematica for preservation processing (i.e. Islandora, DSpace)</li>
 					</ul>
 				</section>
 
 				<section>
+					<h2>How we develop</h2>
+					<p><b>Proof-of-concept projects</b> - done as R&amp;D projects, code may not be stable enough to merge into release so held in artefactual-labs repo<p>
+					<p><b>Sponsored features/feature enhancements</b> - more formal projects, usually include a 10% community fee that pays for merging new code into next release</p>
+				</section>
+
+				<section>
+					<h2>Hydra: York/Hull pilot /1</h2>
+					<p><i><a href="https://www.york.ac.uk/borthwick/projects/archivematica/">Filling the Digital Preservation Gap</a></i>, a Jisc Research Data Spring project.</p>
+					<p>The University of York and the University of Hull had established Hydra-based institutional repositories, but no digital preservation capacity.</p>
+					<p><b>Goal:</b> establish an Archivematica-first workflow for their institutional repositories.</p>
+				</section>
+
+				<section>
 					<h2>Hydra: York/Hull pilot /2</h2>
-					<p>Performed gap analysis to see how Archivematica could meet their research data management needs and identified several areas to improve.</p>
+					<p><b>Automated on-demand DIP generation</b></p>
+					<ul>
+						<li><b>Problem</b>: on-demand DIP generation only available through a manual process</li>
+						<li><b>Solution</b>: extend AIP Re-ingest workflow by adding automation steps. Hydra can now programmatically find out whether a DIP exists for a given AIP by requesting information via API, and can then trigger an AIP re-ingest to start the DIP creation process.</li>
+					</ul>
 				</section>
 
 				<section>
-					<h2>ArchivesSpace: appraisal tab</h2>
+					<h2>Hydra: York/Hull pilot /3</h2>
+					<p><b>Improved METS parsing</b></p>
+					<ul>
+						<li><b>Problem</b>: Archivematica METS.xml files are huge and unwieldy</li>
+						<li><b>Solution</b>: develop METS Reader/Writer, a library that provides an API for working with Archivematica METS files. METS Reader/Writer converts METS.xml to JSON for more efficient processing, allowing the data to be reused in Hydra.</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Hydra: York/Hull pilot /4</h2>
+					<p>Proof-of-concept project "enhanced the facilities of Archivematica so that the DIP can be more easily used as the basis for a repository object which will be ingested for discovery and delivery."</p>
+					<small>- <a href="https://figshare.com/articles/New_draft_item/4040787">Filling the Digital Preservation Gap. Phase Three report</a></small>
+				</section>
+
+				<section>
+					<h2>ArchivesSpace: appraisal tab /1</h2>
 					<p>Sponsor: Bentley Historical Library, University of Michigan</p>
-					<p>"A place between Transfer and Ingest where archivists can make archival appraisal decisions with material from Transfer, and structure an arrangement for the SIP before starting Ingest processes.""</p>
+					<p>"A place between Transfer and Ingest where archivists can make archival appraisal decisions with material from Transfer, and structure an arrangement for the SIP before starting Ingest processes."</p>
+					<small>- <a href="https://wiki.archivematica.org/Appraisal_Arrangement_tab">Archivematica wiki > Appraisal Arrangement tab</a></small></p>
 				</section>
 
 				<section>
-					<h2>ArchivesSpace: PREMIS rights</h2>
-					<p></p>
+					<img src="img/appraisal.png">
 				</section>
 
 				<section>
-					<h2></h2>
-					<p></p>
-					<p></p>
+					<h2>ArchivesSpace: appraisal tab /2</h2>
+					<p><b>Goal</b>: improve ArchivesSpace matching GUI </p>
+					<p>New ArchivesSpace matching GUI allows users to:</p>
+					<ul>
+						<li>Match digital objects to their AS resource</li>
+						<li>Add new child records to an existing AS resource (i.e. create a hierarchical arrangement based on the contents of the transfer)</li>
+						<li>Add and edit descriptive metadata and pass it to AS</li>
+						<li>Add and edit rights metadata and pass it to AS</li>
+					</ul>
 				</section>
 
-				<section class="body">
-					<h2>License</h2>
-					<p>This presentation is licensed CC BY-SA meaning that it can be copied, redistributed, remixed, transformed, and built upon for any purpose as long as proper attribution is given.</p>
+				<section>
+					<h2>ArchivesSpace: PREMIS rights /1</h2>
+					<p>Sponsor: Rockefeller Archive Center</p>
+					<p>"Allow users to apply PREMIS rights to individual objects by including a CSV file with the transfer, rather than having all of the objects in the transfer inherit rights applied to the SIP via the GUI."</p>
+					<small>- <a href="https://wiki.archivematica.org/Object-level_PREMIS_rights_import">Archivematica wiki > Object-level PREMIS rights import</a></small></p>
 				</section>
+
+				<section>
+					<h2>ArchivesSpace: PREMIS rights /2</h2>
+					<p><b>Goal</b>: indicate per-object rights statements, rather than applying one rights statement to the whole transfer, and then pass information to ArchivesSpace</p>
+					<p>New CSV template allows users to:</p>
+					<ul>
+						<li>Pass detailed, per-object PREMIS rights information to the dmdSec of the object</li>
+						<li>Pass rights information to the ArchivesSpace resource using the matching GUI or by including matching instructions within the transfer</li>
+					</ul>
+				</section>
+
+				<section>
+					<h2>Growth by integration</h2>
+					<p>Integrating with repository platforms is a key way that Archivematica continues to grow. By extending the application to play nice with other systems, it is enriched for everyone.</p>
+				</section>
+
+				<section>
+					<h2>Integrating to improve</h2>
+					<p>Making sure that integration work emphasises flexibility and generic-ness of both data inputs and outputs (as much as we can) is important for ensuring that growth is both sustainable and useful.</p>
+				</section>
+
+				<section>
+					<small>Sara Allain | @archivalistic<br />
+					<a href="http://sallain.github.io/c4l17-archivematica">sallain.github.io/c4l17-archivematica</a></small>
+				</section>
+
 			</div>
 
 		</div>
